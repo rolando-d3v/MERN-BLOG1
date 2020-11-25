@@ -15,8 +15,8 @@ import {
 
 export const links = [
   { id: 1, url: "/", text: "home", icon: <FaHome /> },
-  { id: 2, url: "/sidebar2", text: "team", icon: <FaUserFriends /> },
-  { id: 3, url: "/projects", text: "projects", icon: <FaFolderOpen /> },
+  { id: 2, url: "/navigation1", text: "team", icon: <FaUserFriends /> },
+  { id: 3, url: "/navigation2", text: "projects", icon: <FaFolderOpen /> },
   { id: 4, url: "/calendar", text: "calendar", icon: <FaCalendarAlt /> },
   { id: 5, url: "/documents", text: "documents", icon: <FaWpforms /> },
 ];
