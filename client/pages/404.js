@@ -19,7 +19,7 @@ export default function Custom404() {
       </div>
 
       <div className="">
-        <img src="/assets/project-mobile.png" alt="red" className="w-3/4" />
+        <img src="/assets/404.png" alt="red" className="w-3/4" />
       </div>
     </div>
   );

@@ -12,10 +12,9 @@ function MyApp({ Component, pageProps }) {
     setSidebarx(sidebarx === false ? true : false);
   };
 
-
-  const closeSidebar = () =>{
-    setSidebarx(false)
-  }
+  const closeSidebar = () => {
+    setSidebarx(false);
+  };
 
   return (
     <>
@@ -28,7 +27,7 @@ function MyApp({ Component, pageProps }) {
         <AppProvider>
           <Sidebar1 sidebarx={sidebarx} changeSidebar={changeSidebar} />
           <div onClick={sidebarx === true ? closeSidebar : null}>
-            <Component {...pageProps} changeSidebar={changeSidebar}  />
+            <Component {...pageProps} changeSidebar={changeSidebar} />
           </div>
         </AppProvider>
       </div>

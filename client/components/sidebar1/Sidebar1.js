@@ -18,7 +18,7 @@ export default function Sidebar1(props) {
       <div className="flex mt-1 justify-between">
         <Link href="/">
           <a className="nav-link mx-6 ">
-            <img src="/logo512.png" alt="logo" className="w-12 mr-1" />
+            <img src="/assets/react.png" alt="logo" className="w-12 mr-1" />
             <h2 className=" text-white text-xl font-extrabold tracking-wider">
               React js
             </h2>
