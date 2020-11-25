@@ -1,17 +1,8 @@
 import { useState } from "react";
 import Link from "next/link";
-import {TiDeleteOutline} from 'react-icons/ti'
-import {
-  FaChevronDown,
-  FaBars,
-  FaChartBar,
-  FaSyncAlt,
-  FaThLarge,
-  FaExternalLinkAlt,
-  FaShieldAlt,
-  FaPhone,
-  FaPlayCircle,
-} from "react-icons/fa";
+import NavigationMovil from "./NavigationMovil";
+import { dropList1, dropList2 } from "./data";
+import { FaChevronDown, FaBars, FaPhone, FaPlayCircle } from "react-icons/fa";
 
 export default function Home() {
   const [drop, setDrop] = useState(false);
@@ -30,80 +21,6 @@ export default function Home() {
     setDrop2(!drop2);
   };
 
-  const dropList1 = [
-    {
-      id: 1,
-      name: "Analisis",
-      url: "/",
-      icon: <FaChartBar className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
-      text: " Get a better understanding of where your traffic is coming from.",
-    },
-    {
-      id: 2,
-      url: "/",
-      name: "Engagement",
-      icon: (
-        <FaExternalLinkAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />
-      ),
-      text: "Speak directly to your customers in a.",
-    },
-    {
-      id: 3,
-      url: "/",
-      name: "Security",
-      icon: <FaShieldAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
-      text: " Your customers data will be safe and secure.",
-    },
-    {
-      id: 4,
-      url: "/",
-      name: "Integracion",
-      icon: <FaThLarge className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
-      text: " Connect with third-party tools that you’re already using.",
-    },
-    {
-      id: 5,
-      url: "/",
-      name: "Automatizacion",
-      icon: <FaSyncAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
-      text: "Build strategic funnels that will drive your customers to convert",
-    },
-  ];
-
-  const dropList2 = [
-    {
-      id: 1,
-      name: "Analisis",
-      url: "/",
-      icon: <FaChartBar className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
-      text: " Get a better understanding of where your traffic is coming from.",
-    },
-    {
-      id: 2,
-      url: "/",
-      name: "Engagement",
-      icon: (
-        <FaExternalLinkAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />
-      ),
-      text: "Speak directly to your customers in a more meaningful way.",
-    },
-    {
-      id: 3,
-      url: "/",
-      name: "Seguridad",
-      icon: <FaShieldAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
-      text: " Your customers data will be safe and secure.",
-    },
-    {
-      id: 4,
-      url: "/",
-      name: "Integracion",
-      icon: <FaThLarge className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
-      text: " Connect with third-party tools that you’re already using.",
-    },
-  ];
-  // 730
-
   return (
     <div className="relative bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -115,7 +32,7 @@ export default function Home() {
                 src="/assets/react.png"
                 alt="Workflow"
               />
-              <span className='text-indigo-600 font-bold text-2xl ' >React</span>
+              <span className="text-indigo-600 font-bold text-2xl ">React</span>
             </a>
           </div>
 
@@ -189,7 +106,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
             <a
               href="#"
               className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
@@ -204,7 +120,6 @@ export default function Home() {
             </a>
 
             <div className="relative">
-              {/* <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" --> */}
               <button
                 type="button"
                 className="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
@@ -285,102 +200,13 @@ export default function Home() {
           </div>
         </div>
       </div>
-
       {/* MOVIL */}
-      <section className="absolute top-0 inset-x-0  transition transform origin-top-right md:hidden">
-        <div
-          className={`${
-            sidebarPhone ? "flex-col" : "hidden"
-          } "rounded-lg shadow-lg"`}
-        >
-          <div className="rounded-lg shadow-xs bg-white divide-y-2 divide-gray-50">
-            <div className="pt-2 pb-6 px-4 space-y-6">
-              <div className="flex items-center justify-between">
-                <a className='flex items-center'  >
-                  <img
-                    className="h-8 w-auto mr-1"
-                    src="/assets/react.png"
-                    alt="Workflow"
-                  />
-                 <span className='text-indigo-600 font-bold text-2xl ' >React</span>
-                </a>
-                <div className="-mr-2">
-                  <button
-                    type="button"
-                    className="inline-flex items-center justify-center my-2 mr-1 rounded-md text-gray-400  focus:outline-none focus:text-gray-500"
-                    onClick={() => showSidebarPhone()}
-                  >
-                    <TiDeleteOutline  className="h-8 w-8"/>
-                  </button>
-                </div>
-              </div>
-              <div>
-                <nav className="grid gap-y-8">
-                  {dropList1.map((ev) => (
-                    <Link href={ev.url} key={ev.id}>
-                      <a className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
-                        {ev.icon}
-                        <div className="space-y-1">
-                          <p className="text-base leading-6 font-medium text-gray-900">
-                            {ev.name}
-                          </p>
-                        </div>
-                      </a>
-                    </Link>
-                  ))}
-                </nav>
-              </div>
-            </div>
-            <div className="py-6 px-5 space-y-6">
-              <div className="grid grid-cols-2 gap-y-4 gap-x-8">
-                <a
-                  href="#"
-                  className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
-                >
-                  Pricing
-                </a>
-                <a
-                  href="#"
-                  className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
-                >
-                  Docs
-                </a>
-                {dropList2.map((ev) => (
-                  <Link href={ev.url} key={ev.id}>
-                    <a className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
-                      {ev.icon}
-                      <div className="space-y-1">
-                        <p className="text-base leading-6 font-medium text-gray-900">
-                          {ev.name}
-                        </p>
-                      </div>
-                    </a>
-                  </Link>
-                ))}
-              </div>
-              <div className="space-y-6">
-                <span className="w-full flex rounded-md shadow-sm">
-                  <a
-                    href="#"
-                    className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
-                  >
-                    Sign up
-                  </a>
-                </span>
-                <p className="text-center text-base leading-6 font-medium text-gray-500">
-                  Existing customer?
-                  <a
-                    href="#"
-                    className="text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
-                  >
-                    Sign in
-                  </a>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <NavigationMovil
+        showSidebarPhone={showSidebarPhone}
+        sidebarPhone={sidebarPhone}
+        dropList1={dropList1}
+        dropList2={dropList2}
+      />
     </div>
   );
 }
