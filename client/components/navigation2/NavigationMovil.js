@@ -3,8 +3,7 @@ import Link from "next/link";
 import { TiDeleteOutline } from "react-icons/ti";
 
 export default function NavigationMovil(props) {
-
-    const {showSidebarPhone, sidebarPhone, dropList1, dropList2} = props
+  const { showSidebarPhone, sidebarPhone, dropList1, dropList2 } = props;
 
   return (
     <section className="absolute top-0 inset-x-0  transition transform origin-top-right md:hidden">
@@ -57,19 +56,19 @@ export default function NavigationMovil(props) {
             <div className="grid grid-cols-2 gap-y-4 gap-x-8">
               <a
                 href="#"
-                className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
+                className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 "
               >
                 Pricing
               </a>
               <a
                 href="#"
-                className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
+                className="text-base leading-6 font-medium text-gray-900 hover:text-gray-700 "
               >
                 Docs
               </a>
               {dropList2.map((ev) => (
                 <Link href={ev.url} key={ev.id}>
-                  <a className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                  <a className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 ">
                     {ev.icon}
                     <div className="space-y-1">
                       <p className="text-base leading-6 font-medium text-gray-900">
@@ -84,20 +83,19 @@ export default function NavigationMovil(props) {
               <span className="w-full flex rounded-md shadow-sm">
                 <a
                   href="#"
-                  className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+                  className="w-full text-center px-4 py-2 text-lg font-bold rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none "
                 >
                   Sign up
                 </a>
               </span>
-              <p className="text-center text-base leading-6 font-medium text-gray-500">
-                Existing customer?
-                <a
-                  href="#"
-                  className="text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
-                >
+              <div className='flex items-center justify-around text-center ' >
+                <span className="text-center text-base leading-6 font-medium text-gray-500">
+                  Existing customer?
+                </span>
+                <a href="#" className="text-indigo-600 font-bold hover:text-indigo-500">
                   Sign in
                 </a>
-              </p>
+              </div>
             </div>
           </div>
         </div>

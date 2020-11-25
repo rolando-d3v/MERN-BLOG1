@@ -1,17 +1,10 @@
-import React from "react"
+import React from "react";
+import MainLayout from "../components/layout/main/MainLayout";
 
-import Navigation from "../components/sidebar1/Navigation";
-import Modal from "../components/sidebar1/Modal";
-
-export default function Home(props) {
-
-const {changeSidebar} = props
- 
-
+export default function Home() {
   return (
-    <div  className=''  >
-      <Navigation  changeSidebar={changeSidebar}  />
-      <Modal />
-    </div>
+    <MainLayout className="">
+      <h3>hola</h3>
+    </MainLayout>
   );
 }

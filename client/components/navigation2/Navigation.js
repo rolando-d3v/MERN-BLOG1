@@ -36,6 +36,7 @@ export default function Home() {
             </a>
           </div>
 
+          {/* BOTON OPEN MOVIL */}
           <div className="-mr-2 -my-2 md:hidden">
             <button
               type="button"
@@ -50,20 +51,20 @@ export default function Home() {
             <div className="relative">
               <button
                 type="button"
-                className="text-gray-500 group inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+                className="text-gray-500 group inline-flex items-center space-x-2 text-base font-medium hover:text-azul-900 focus:outline-none focus:text-indigo-600 "
                 onClick={() => hiddenDrop()}
               >
                 <span>Soluciones</span>
                 <FaChevronDown className="text-gray-400 hover:text-gray-500 h-3 w-3" />
               </button>
 
-              <div className="absolute -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+              <div className="absolute -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-3/4">
                 <div
                   className={`${
                     drop ? "flex" : "hidden"
                   } "rounded-lg shadow-lg" `}
                 >
-                  <div className="rounded-lg shadow-xs overflow-hidden">
+                  <div className="rounded-lg shadow-xs overflow-hidden shadow-xl">
                     <div className="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                       {dropList1.map((ev) => (
                         <Link href={ev.url} key={ev.id}>
@@ -82,22 +83,22 @@ export default function Home() {
                       ))}
                     </div>
 
-                    <div className="px-5 py-5 bg-gray-50 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8">
-                      <div className="flow-root">
+                    <div className="px-5 py-5 bg-indigo-500 space-y-6 sm:flex sm:space-y-0 sm:space-x-10 sm:px-8 flex justify-around">
+                      <div className="flow-root text-gray-100">
                         <a
                           href="#"
-                          className="-m-3 p-3 flex items-center space-x-3 rounded-md text-base leading-6 font-medium text-gray-900 hover:bg-gray-100 transition ease-in-out duration-150"
+                          className="-m-3 p-3 flex items-center space-x-3 rounded-md text-base leading-6 font-medium hover:bg-indigo-600"
                         >
-                          <FaPlayCircle className="flex-shrink-0 h-6 w-6 text-gray-400" />
+                          <FaPlayCircle className="flex-shrink-0 h-6 w-6 text-gray-100" />
                           <span>Watch Demo</span>
                         </a>
                       </div>
-                      <div className="flow-root">
+                      <div className="flow-root text-gray-100">
                         <a
                           href="#"
-                          className="-m-3 p-3 flex items-center space-x-3 rounded-md text-base leading-6 font-medium text-gray-900 hover:bg-gray-100 transition ease-in-out duration-150"
+                          className="-m-3 p-3 flex items-center space-x-3 rounded-md text-base leading-6 font-medium  hover:bg-indigo-600"
                         >
-                          <FaPhone className="flex-shrink-0 h-6 w-6 text-gray-400" />
+                          <FaPhone className="flex-shrink-0 h-6 w-6 text-gray-100" />
                           <span>Contact Sales</span>
                         </a>
                       </div>
@@ -108,13 +109,13 @@ export default function Home() {
             </div>
             <a
               href="#"
-              className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+              className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900"
             >
               Precio
             </a>
             <a
               href="#"
-              className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+              className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900"
             >
               Documentacion
             </a>
@@ -122,7 +123,7 @@ export default function Home() {
             <div className="relative">
               <button
                 type="button"
-                className="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-gray-900 focus:outline-none focus:text-gray-900 transition ease-in-out duration-150"
+                className="text-gray-500 inline-flex items-center space-x-2 text-base leading-6 font-medium hover:text-azul-800 focus:outline-none focus:text-indigo-600"
                 onClick={() => hiddenDrop2()}
               >
                 <span>Mas</span>
@@ -134,11 +135,11 @@ export default function Home() {
                     drop2 ? "flex" : "hidden"
                   } "rounded-lg shadow-lg" `}
                 >
-                  <div className="rounded-lg shadow-xs overflow-hidden">
+                  <div className="rounded-lg shadow-xs overflow-hidden shadow-xl ">
                     <div className="z-20 relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                       {dropList2.map((ev) => (
                         <Link href={ev.url} key={ev.id}>
-                          <a className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50 transition ease-in-out duration-150">
+                          <a className="-m-3 p-3 flex items-start space-x-4 rounded-lg hover:bg-gray-50">
                             {ev.icon}
                             <div className="space-y-1">
                               <p className="text-base leading-6 font-medium text-gray-900">
@@ -152,16 +153,16 @@ export default function Home() {
                         </Link>
                       ))}
                     </div>
-                    <div className="px-5 py-5 bg-gray-50 space-y-5 sm:px-8 sm:py-8">
+                    <div className="p-5 bg-indigo-500 space-y-5 sm:px-8 sm:py-8">
                       <div className="space-y-4">
-                        <h3 className="text-sm leading-5 tracking-wide font-medium text-gray-500 uppercase">
+                        <h3 className="text-sm leading-5 tracking-wide font-medium text-gray-100 uppercase">
                           Recent Posts
                         </h3>
                         <ul className="space-y-4">
                           <li className="text-base leading-6 truncate">
                             <a
                               href="#"
-                              className="font-medium text-gray-900 hover:text-gray-700 transition ease-in-out duration-150"
+                              className="font-medium text-gray-50 hover:text-gray-200"
                             >
                               Boost your conversion rate
                             </a>
@@ -171,7 +172,7 @@ export default function Home() {
                       <div className="text-sm leading-5">
                         <a
                           href="#"
-                          className="font-medium text-indigo-600 hover:text-indigo-500 transition ease-in-out duration-150"
+                          className="font-medium text-blue-200 hover:text-indigo-100"
                         >
                           View all posts &rarr;
                         </a>
@@ -185,14 +186,14 @@ export default function Home() {
           <div className="hidden md:flex items-center justify-end space-x-8 md:flex-1 lg:w-0">
             <a
               href="#"
-              className="whitespace-no-wrap text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900"
+              className="text-base leading-6 font-medium text-gray-500 hover:text-gray-900 focus:outline-none focus:text-gray-900"
             >
               Sign in
             </a>
             <span className="inline-flex rounded-md shadow-sm">
               <a
                 href="#"
-                className="whitespace-no-wrap inline-flex items-center justify-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150"
+                className="inline-flex px-4 py-2 text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none"
               >
                 Sign up
               </a>
