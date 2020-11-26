@@ -4,12 +4,8 @@ import { FaBars, FaAngleDown } from "react-icons/fa";
 import { links, social } from "./dataLinks";
 
 export default function Navigation(props) {
-  const { changeSidebar } = props;
-  const [drop, setDrop] = useState(false);
-
-  const showDrop = () => {
-    setDrop(!drop);
-  };
+  const { changeSidebar, drop, showDrop } = props;
+  
 
   return (
     <div className="">

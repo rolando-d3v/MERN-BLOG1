@@ -6,6 +6,8 @@ export default function GifApp() {
  
   const [category, setCategory] = useState("");
   const [valuesx, setValuesx] = useState("");
+
+  //CUSTOM HOOK
   const {dataGif, loading} = useGif(category);
 
   const addData = (e) => {
@@ -32,7 +34,7 @@ export default function GifApp() {
               onChange={addData}
             />
           </div>
-          <button className="btn" type="submit">
+          <button className="btn focus:ring-2 focus:ring-azul-800 " type="submit">
             bucars{" "}
           </button>
         </form>

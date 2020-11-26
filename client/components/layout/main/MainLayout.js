@@ -4,7 +4,17 @@ import Sidebar from "./Sidebar";
 
 export default function MainLayout(props) {
   const [sidebarx, setSidebarx] = useState(false);
+  const [drop, setDrop] = useState(false);
 
+  const showDrop = () => {
+    setDrop(!drop);
+  };
+
+  const closeDrop = () => {
+    setDrop(false);
+  };
+
+  //sidebar
   const changeSidebar = () => {
     setSidebarx(sidebarx === false ? true : false);
   };
@@ -15,9 +25,16 @@ export default function MainLayout(props) {
 
   return (
     <div>
-      <Navigation changeSidebar={changeSidebar}  />
+      <Navigation
+        changeSidebar={changeSidebar}
+        drop={drop}
+        showDrop={showDrop}
+      />
       <Sidebar sidebarx={sidebarx} changeSidebar={changeSidebar} />
-      <section className='h-screen pt-16 bg-gray-50 '  onClick={sidebarx === true ? closeSidebar : null}  >
+      <section
+        className="h-screen pt-16 bg-gray-50 "
+        onClick={sidebarx ? closeSidebar : closeDrop}
+      >
         {props.children}
       </section>
     </div>
