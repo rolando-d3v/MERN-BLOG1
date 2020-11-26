@@ -17,7 +17,7 @@ export default function MainLayout(props) {
     <div>
       <Navigation changeSidebar={changeSidebar}  />
       <Sidebar sidebarx={sidebarx} changeSidebar={changeSidebar} />
-      <section onClick={sidebarx === true ? closeSidebar : null}>
+      <section className='h-screen pt-16 bg-gray-50 '  onClick={sidebarx === true ? closeSidebar : null}  >
         {props.children}
       </section>
     </div>

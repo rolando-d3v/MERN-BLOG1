@@ -13,7 +13,8 @@ export default function Navigation(props) {
 
   return (
     <div className="">
-      <section className=" w-full bg-azul-700 flex items-center justify-between md:hidden px-3">
+      {/* MOVIL */}
+      <section className="absolute w-full bg-azul-700 flex items-center justify-between md:hidden px-3">
         <Link href="/">
           <a className="nav-link ">
             <img src="/assets/react.png" alt="logo" className="w-12 mr-1" />
@@ -27,7 +28,7 @@ export default function Navigation(props) {
         </button>
       </section>
 
-      <div className="bg-azul-700 w-full px-3">
+      <div className="bg-azul-700 w-full px-3 absolute ">
         <div className="hidden md:flex ">
           <div className="flex items-center justify-between w-full">
             <section className="flex items-center">
