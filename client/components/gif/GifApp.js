@@ -1,19 +1,13 @@
-import React, { useEffect, useState } from "react";
-import { obtenerApi } from "./apiGif";
+import React, { useEffect, useState } from "react"
 import CardGif from "./CardGif";
+import { useGif } from "./hooks/useGif";
 
 export default function GifApp() {
-  const [gifData, setGifData] = useState([]);
+ 
   const [category, setCategory] = useState("");
   const [valuesx, setValuesx] = useState("");
+  const {dataGif, loading} = useGif(category);
 
-  useEffect(() => {
-    const rex = async () => {
-      const rexu = await obtenerApi(category);
-      setGifData(rexu);
-    };
-    rex();
-  }, [category]);
 
   const addData = (e) => {
     setValuesx(e.target.value);
@@ -22,6 +16,7 @@ export default function GifApp() {
   const buscarGif = (e) => {
     e.preventDefault();
     setCategory(valuesx);
+    setValuesx('')
   };
 
   return (
@@ -43,8 +38,9 @@ export default function GifApp() {
           </button>
         </form>
       </div>
+      {loading && <h3>cargando...</h3>   }
       <div className=" flex flex-wrap">
-        {gifData.map((ev) => (
+        {dataGif.map((ev) => (
           <CardGif key={ev.id} ev={ev} />
         ))}
       </div>
