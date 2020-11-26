@@ -1,19 +1,11 @@
-import {
-  FaChartBar,
-  FaSyncAlt,
-  FaThLarge,
-  FaExternalLinkAlt,
-  FaShieldAlt,
-  FaPhone,
-  FaPlayCircle,
-} from "react-icons/fa";
+import * as FaIcons from "react-icons/fa";
 
 export const dropList1 = [
   {
     id: 1,
     name: "Analisis",
     url: "/",
-    icon: <FaChartBar className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
+    icon: <FaIcons.FaChartBar className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
     text: " Get a better understanding of where your traffic is coming from.",
   },
   {
@@ -21,7 +13,7 @@ export const dropList1 = [
     url: "/",
     name: "Engagement",
     icon: (
-      <FaExternalLinkAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />
+      <FaIcons.FaExternalLinkAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />
     ),
     text: "Speak directly to your customers in a.",
   },
@@ -29,21 +21,21 @@ export const dropList1 = [
     id: 3,
     url: "/",
     name: "Security",
-    icon: <FaShieldAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
+    icon: <FaIcons.FaShieldAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
     text: " Your customers data will be safe and secure.",
   },
   {
     id: 4,
     url: "/",
     name: "Integracion",
-    icon: <FaThLarge className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
+    icon: <FaIcons.FaThLarge className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
     text: " Connect with third-party tools that you’re already using.",
   },
   {
     id: 5,
     url: "/",
     name: "Automatizacion",
-    icon: <FaSyncAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
+    icon: <FaIcons.FaSyncAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
     text: "Build strategic funnels that will drive your customers to convert",
   },
 ];
@@ -53,7 +45,7 @@ export const dropList2 = [
     id: 1,
     name: "Analisis",
     url: "/",
-    icon: <FaChartBar className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
+    icon: <FaIcons.FaChartBar className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
     text: " Get a better understanding of where your traffic is coming from.",
   },
   {
@@ -61,7 +53,7 @@ export const dropList2 = [
     url: "/",
     name: "Engagement",
     icon: (
-      <FaExternalLinkAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />
+      <FaIcons.FaExternalLinkAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />
     ),
     text: "Speak directly to your customers in a more meaningful way.",
   },
@@ -69,14 +61,14 @@ export const dropList2 = [
     id: 3,
     url: "/",
     name: "Seguridad",
-    icon: <FaShieldAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
+    icon: <FaIcons.FaShieldAlt className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
     text: " Your customers data will be safe and secure.",
   },
   {
     id: 4,
     url: "/",
     name: "Integracion",
-    icon: <FaThLarge className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
+    icon: <FaIcons.FaThLarge className="flex-shrink-0 h-6 w-6 text-indigo-600" />,
     text: " Connect with third-party tools that you’re already using.",
   },
 ];
