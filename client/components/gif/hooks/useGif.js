@@ -4,6 +4,7 @@ import { obtenerApi } from "../apiGif";
 export const useGif = (category) => {
   const [dataGif, setDataGif] = useState([]);
   const [loading, setLoading] = useState(true);
+  
 
   useEffect(() => {
     const result = async () => {

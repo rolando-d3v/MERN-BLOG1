@@ -8,7 +8,6 @@ export default function GifApp() {
   const [valuesx, setValuesx] = useState("");
   const {dataGif, loading} = useGif(category);
 
-
   const addData = (e) => {
     setValuesx(e.target.value);
   };
