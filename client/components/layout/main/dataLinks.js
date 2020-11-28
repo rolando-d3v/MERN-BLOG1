@@ -6,7 +6,7 @@ export const links = [
   { id: 2, url: "/navigation1", text: "team", icon: <FaIcons.FaUserFriends /> },
   { id: 3, url: "/navigation2", text: "projects", icon: <FaIcons.FaFolderOpen /> },
   { id: 4, url: "/gif", text: "calendar", icon: <FaIcons.FaCalendarAlt /> },
-  { id: 5, url: "/documents", text: "documents", icon: <FaIcons.FaWpforms /> },
+  { id: 5, url: "/sidebar2", text: "documents", icon: <FaIcons.FaWpforms /> },
 ];
 
 export const social = [
